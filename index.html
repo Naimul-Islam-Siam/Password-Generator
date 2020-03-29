@@ -4,20 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Sen&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <h1>Password Generator</h1>
 
-      <div>
+      <div class="password">
         <input type="text" placeholder="Your password will be here" id="text" />
-        <button onclick="copy()">Copy Password</button>
+        <button onclick="copy()" id="btn-copy" class="tooltip">Copy</button>
       </div>
 
       <form id="form">
         <label for="rangeNumber">Number of Characters</label>
-        <div>
+        <div class="rangeContainer">
           <input type="range" min="5" max="50" value="10" id="rangeSlider" />
           <input type="number" min="5" max="50" value="10" id="rangeNumber" />
         </div>
@@ -30,9 +34,9 @@
 
         <label for="includeSymbols">Include Symbols</label>
         <input type="checkbox" id="includeSymbols" />
-
-        <button type="submit">Generate Password</button>
       </form>
+
+      <button type="submit" id="btn-submit">Generate Password</button>
     </div>
 
     <script src="main.js"></script>

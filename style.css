@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: red;
+  font-family: "Sen";
+  background-image: linear-gradient(to bottom right, #716fdf, #31c6db);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,19 +14,94 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  margin-bottom: 2rem;
+  color: #989adc;
+  text-align: center;
+}
+
+.password {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #1b202a;
+  color: #ddd;
   max-width: 500px;
-  padding: 2.5rem;
+  padding: 4rem 2.5rem;
+  border-radius: 10px;
 }
 
 form {
+  margin-top: 2.5rem;
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 3rem;
-  row-gap: 1rem;
+  row-gap: 2rem;
+}
+
+button {
+  padding: 13px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, #078fb1, #26bcb0);
+  color: #ddd;
+}
+
+#text {
+  padding: 12px 18px;
+  background-color: #1c1f2c;
+  outline: none;
+  color: #ddd;
+  border: 1px solid #28333f;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#btn-copy {
+  margin-left: 10px;
+}
+
+#btn-submit {
+  margin-top: 3rem;
+}
+
+.rangeContainer {
+  display: flex;
+  align-items: center;
+}
+
+input[type="range"] {
+  cursor: pointer;
+}
+
+input[type="number"] {
+  padding: 4px;
+  width: 45px;
+  outline: none;
+  background-color: #1c1f2c;
+  color: #ddd;
+  border: 1px solid #28333f;
+  border-radius: 4px;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 484px) {
+  .container {
+    width: 97vw;
+    padding: 3rem 2rem;
+    font-size: 13px;
+  }
+
+  form {
+    column-gap: 1.4rem;
+  }
 }

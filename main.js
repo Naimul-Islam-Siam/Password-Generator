@@ -4,12 +4,13 @@ const includeNumbersElement = document.getElementById('includeNumbers');
 const includeUppercaseElement = document.getElementById('includeUppercase');
 const includeSymbolsElement = document.getElementById('includeSymbols');
 const form = document.getElementById('form');
+const submitBtn = document.getElementById('btn-submit');
 const textInput = document.getElementById('text');
 
 
 rangeSlider.addEventListener('input', syncRange);
 rangeNumber.addEventListener('input', syncRange);
-form.addEventListener('submit', formAction);
+submitBtn.addEventListener('click', formAction);
 
 
 
